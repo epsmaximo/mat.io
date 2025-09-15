@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estadística en Acción</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #2de6ff, #a62cb6);
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      background: rgba(255, 0, 0, 0.7);
+      color: rgb(29, 225, 26);
+      padding: 25px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 5px #227e00;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #ffde59;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #2cb67d;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+      background: rgb(222, 60, 255);
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgb(17, 255, 0);
+    }
+
+    h2 {
+      text-align: center;
+      color: #ffffff;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* Tarjetas de conceptos */
+    .conceptos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .tarjeta {
+      background: #8583d3;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.1rem;
+      border: none;
+      box-shadow: 0 4px 8px rgb(242, 242, 52);
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .tarjeta:hover {
+      transform: scale(1.05);
+      background: #47c727;
+    }
+
+    .tarjeta h3 {
+      color: #ececec;
+      margin-bottom: 10px;
+    }
+
+    /* Galería */
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .galeria a {
+      display: block;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgb(30, 214, 45);
+      transition: transform 0.3s;
+    }
+
+    .galeria a:hover {
+      transform: rotate(-2deg) scale(1.05);
+    }
+
+    .galeria img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    footer {
+      background: rgba(45, 64, 190, 0.8);
+      color: rgb(170, 255, 73);
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 1rem;
+    }
+
+    footer span {
+      color: #ffde59;
+      font-weight: bold;
+    }
+
+    /* 📱 Responsive para celulares */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 8px;
+        font-size: 1rem;
+      }
+
+      section {
+        margin: 20px 10px;
+        padding: 15px;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .galeria img {
+        height: 160px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+
+      nav {
+        display: flex;
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 5px 0;
+      }
+
+      .galeria img {
+        height: 140px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📊 Estadística en Acción</h1>
+    <nav>
+      <a href="#intro">Inicio</a>
+      <a href="#conceptos">Conceptos</a>
+      <a href="#galeria">Galería</a>
+    </nav>
+  </header>
+
+  <section id="intro">
+    <h2>¿Qué es la Estadística?</h2>
+    <p>
+      La estadística es una disciplina fundamental en matemáticas que se utiliza para recopilar,
+      organizar, analizar e interpretar datos con el objetivo de obtener información significativa sobre
+      fenómenos y poblaciones. Esta ciencia emplea herramientas matemáticas y probabilísticas para
+      desarrollar métodos y modelos que permiten el análisis y la interpretación de los datos,
+       y se aplica en una amplia variedad de campos, desde las ciencias naturales y sociales hasta
+       la publicidad, el mercadeo, la industria y el entretenimiento
+    </p>
+  </section>
+
+  <section id="conceptos">
+    <h2>Conceptos Clave</h2>
+    <div class="conceptos">
+      <div class="tarjeta">
+        <h3>Media</h3>
+         <p>Se obtiene como el cociente entre la suma de todos los datos y la cantidad de todos los datos.</p>
+      </div>
+      <div class="tarjeta">
+        <h3>Mediana</h3>
+        <p>Valor que ocupa el lugar central al ordenar los datos de menor a mayor.</p>
+      </div>
+      <div class="tarjeta">
+        <h3>Moda</h3>
+        <p>Es el valor que tiene mayor frecuencia. puede suceder que no haya moda, o que exista más de una.</p>
+      </div>
+      <div class="tarjeta">
+        <h3>Gráficos</h3>
+        <p>Para representar variables cualitativas o cuantitativas discretas, se utilizan los gráflcos de barras y los circulares,
+           los gráficos de barras muestran las frecuencia absolutas de los
+           diferentes valores de la variables y los Gráficos circulares,
+           los porcentajes de cada valor.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeria">
+    <h2>Galería de Ejemplos</h2>
+    <p>Acá estan los trabajos realizados en clases de Matematicas👇</p>
+    <div class="galeria">
+      <a href="maxi1.PNG" target="_blank"><img src="maxi1.PNG" alt="Ejemplo 1"></a>
+      <a href="maxi3.PNG" target="_blank"><img src="maxi3.PNG" alt="Ejemplo 2"></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>Hecho por MAXIMO VILLANUEVA estudiante de <span>EPS</span> 💡 | Proyecto de Informatica articulado con matemáticas</p>
+  </footer>
+</body>
+</html>
